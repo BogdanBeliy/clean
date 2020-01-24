@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% block title%}
+
+    {% if title %}
+    <title>{{title}}</title>
+    {% else %}
+    <title>Уборка жилых и коммерческих помещений</title>
+    {% endif %}
+    {% endblock %}
+
+</head>
+<body>
+    <ul>
+        <li><a href="{{ url_for('support_clean') }}">Поддеривающая</a></li>
+        <li><a href="{{ url_for('general_clean') }}">Генеральная</a></li>
+        <li><a href="{{ url_for('office_clean') }}">Офисов</a></li>
+        <li><a href="{{ url_for('window_clean') }}">Мытье окон</a></li>
+        <li><a href="{{ url_for('repair_clean') }}">После ремонта</a></li>
+    </ul>   
+{% block content %}
+
+{% endblock %}
+
+
+
+
+</body>
+</html>
